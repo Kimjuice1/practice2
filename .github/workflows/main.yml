@@ -1,0 +1,15 @@
+name : First workflow
+on : push
+jobs:
+  echo:
+    runs-on: ubuntu_lastest
+    steps:
+      - run: echo 'Hello'
+  pwd-ls:
+    name: PWD, ls
+    runs-on: ubuntu_lastest
+    steps:
+      - name: Print working directory
+        run: pwd
+      - name: List files
+        run: ls -al
